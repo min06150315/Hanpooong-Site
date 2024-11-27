@@ -1,0 +1,80 @@
+body {
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #d4d9da;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+/* 타이틀 영역 */
+#main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#menu-bar {
+    background-color: #0e0b0b88;
+    overflow: hidden;
+    border: 1px solid #d4d9da;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 자식 요소를 중앙 정렬 */
+}
+
+#menu-bar a {
+    display: block;
+    color: #d4d9da;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+#menu-bar a:hover {
+    background-color: #d4d9da;
+    color: black;
+}
+
+#content {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    gap: 20px; /* 섹션 간 간격 */
+}
+
+.video-text-container {
+    display: flex;
+    flex-direction: row; /* 가로로 정렬 */
+    align-items: flex-start; /* 텍스트를 위쪽 정렬 */
+    gap: 20px; /* 비디오와 텍스트 간 간격 */
+    padding: 20px;
+    border: 1px solid #d4d9da; /* 구분선을 위해 추가 */
+    background-color: rgba(14, 11, 11, 0.6); /* 배경색 설정 */
+    border-radius: 8px;
+}
+
+#video1, #video2 {
+    flex: 1; /* 비디오 영역이 고정 크기를 유지 */
+}
+
+#context {
+    flex: 2; /* 텍스트 영역이 더 넓게 설정 */
+    color: #d4d9da;
+}
+
+#context a {
+    text-decoration: none;
+    color: #d4d9da;
+}
+
+#context a:hover {
+    color: #ffffff;
+}
