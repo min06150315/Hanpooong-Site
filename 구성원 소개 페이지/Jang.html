@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장구치배 소개</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans KR", "sans-serif";
+        text-align: center;
+        background-image: url(./img/bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .main-image {
+        width: 200px; /* 첫 번째 사진 크기 */
+        height: auto;
+        margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+        display: block;
+        cursor: pointer; /* 클릭할 수 있다는 것을 표시하는 커서 */
+      }
+      .container {
+        display: grid;
+        grid-gap: 100px; /* 사진 간의 간격 */
+        justify-content: center; /* 전체 중앙 정렬 */
+        padding: 10px;
+        grid-template-columns: repeat(3, 200px); /* 각 줄에 3개, 고정 크기 */
+      }
+      .card {
+        width: 250px; /* 사람 사진 크기 확대 */
+        text-align: center; /* 설명 중앙 정렬 */
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f9f9f9;
+      }
+      .card img {
+        width: 100%; /* 카드 너비에 맞게 조정 */
+        height: 250px; /* 사람 사진 높이 고정, 크기 키움 */
+        object-fit: cover; /* 비율 유지 */
+        border-radius: 8px;
+      }
+      .card p {
+        font-size: 14px; /* 텍스트 크기 */
+        margin: 5px 0; /* 텍스트와 사진 간 여백 */
+        color: #333; /* 설명 텍스트 색상 */
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <h1 style="color: white">장구치배 소개</h1>
+
+    <!-- 첫 번째 이미지 (장구 사진) -->
+    <img
+      src="./img/instrument/장구.jpeg"
+      alt="장구 사진"
+      class="main-image"
+      id="장구소리"
+    /><br />
+
+    <!-- 사진: 3개씩 두 줄 -->
+    <div class="container">
+      <!-- 첫 번째 줄 -->
+      <div class="card">
+        <img src="./img/member/jang/박온유.jpeg" alt="박온유" />
+        <p>27기 수장 박온유</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/jang/박서준.jpeg" alt="박서준" />
+        <p>27기 장구치배 박서준</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/jang/이예준.jpeg" alt="이예준" />
+        <p>27기 장구치배 이예준</p>
+      </div>
+      <!-- 두 번째 줄 -->
+      <div class="card">
+        <img src="./img/member/jang/정채윤.jpeg" alt="정채윤" />
+        <p>28기 장구치배 정채윤</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/jang/이경석.jpeg" alt="이경석" />
+        <p>28기 장구치배 이경석</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/jang/이하연.jpeg" alt="이하연" />
+        <p>28기 장구치배 이하연</p>
+      </div>
+    </div>
+
+    <!-- 소리 파일 추가 -->
+    <audio id="장구소리-소리" src="./music/장구소리.mp3" preload="auto"></audio>
+
+    <script>
+      // 이미지를 클릭했을 때 소리 재생
+      document
+        .getElementById("장구소리")
+        .addEventListener("click", function () {
+          var sound = document.getElementById("장구소리-소리");
+          sound.play(); // 소리 재생
+        });
+    </script>
+  </body>
+</html>

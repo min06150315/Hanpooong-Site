@@ -1,0 +1,84 @@
+body {
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #d4d9da;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+/* 타이틀 영역 */
+#main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#menu-bar {
+    background-color: #0e0b0b88;
+    overflow: hidden;
+    border: 1px solid #d4d9da;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 자식 요소를 중앙 정렬 */
+}
+
+#menu-bar a {
+    display: block;
+    color: #d4d9da;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+#menu-bar a:hover {
+    background-color: #d4d9da;
+    color: black;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 카드 */
+    gap: 20px; /* 카드 간 간격 */
+    margin: 40px 0px;
+}
+
+/* 각 카드 설정 */
+.card {
+    text-align: center;
+}
+
+/* 카드 이미지 크기 설정 */
+.card img {
+    width: 100%; /* 이미지가 카드 크기에 맞게 늘어나도록 */
+    max-width: 250px; /* 최대 너비 제한 */
+    height: auto;
+}
+
+#navigate-button {
+    display: block; /* 중앙 정렬을 위한 블록 요소로 변경 */
+    margin: 50px auto; /* 상하 여백 20px, 좌우 자동 */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #333;
+    border: 1px solid #d4d9da;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#navigate-button:hover {
+    background-color: #d4d9da;
+    color: black;
+}
+

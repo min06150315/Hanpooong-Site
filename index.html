@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanpoong</title>
+    
+    <style>
+        h3{color:white; /*글자 색깔*/
+            font-family: 'ChusaLove'; /*폰트*/
+            font-size:2em; /*글자 사이즈*/
+            }
+        h1{color:white;/*글자 색깔*/
+            font-family: 'Shilla_CultureB-Bold';/*폰트*/
+            font-size: 5em;/*글자 사이즈*/
+        }
+        /*사용한 폰트*/
+        @font-face {
+        font-family: 'Shilla_CultureB-Bold';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'ChusaLove';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        }
+        /*이미지 컨테이너 스타일*/
+        .image-container{
+            position : relative; /*사진은 상대위치*/
+            /*컨테이너 너비, 높이*/
+            width : 1465px; 
+            height:250px;
+        }
+        .text-overlay{ /*사진 위에 글자 올리기*/
+            position:absolute; /*절대위치 설정*/
+            color:white; /*색상*/
+            font-family:'ChusaLove'; /*글꼴*/
+            font-size: 2em; /*글자 사이즈*/        
+            cursor:pointer; /*마우스 커서를 포인터로 변경*/
+            text-decoration:none;  /*밑줄 없애기*/  
+
+        }
+        .text-overlay.intro { bottom: 30px; left: 20px; }  /* 동아리 소개 */
+        .text-overlay.member  { bottom: 30px; left: 396px; } /* 구성원 소개 */
+        .text-overlay.contents { bottom: 30px; left: 762px; } /* 컨텐츠 소개 */
+        .text-overlay.reservation { bottom: 30px; left: 1128px; } /* 공연 예약하기 */
+
+        .text-overlay:hover { /*글자에 마우스를 올리면*/
+            font-size:3em; /*글자 사이즈 1em 만큼 키우기*/
+        }
+     
+    </style>
+</head>
+<body background="./hanpoong.png"> <!--뒷배경 사진-->
+    <!--배경음악 반복 재생하기-->
+    <audio id="background-music" autoplay> 
+        <source src ="./한풍 전우치.mp3" type="audio/mpeg" allow="autoplay">
+    </audio>
+    <br>
+    <br>
+    <br>
+    <h3 style="text-align:center";>하나님의 군악대</H3> <!--부제목-->
+    <h1 style="text-align:center"; onclick="document.getElementById('background-music').play()">한풍</H1><!--제목, 제목 클릭하면 음악 재생-->    
+    <br>
+    <br>
+    <div class="image-container"> <!--이미지와 텍스트를 포함하는 div 생성-->
+        <img src="./selection (2).png" alt="selection" usemap="#selection" width="1465" height="250"> <!--선택하는 영역 사진-->
+
+        <!--각 링크로 연결되는 텍스트 오버레이-->
+        <a class="text-overlay intro" href="./동아리 소개 페이지/Intro.html">동아리 소개</a>
+        <a class="text-overlay member" href="./구성원 소개 페이지/Members.html">구성원 소개</a>
+        <a class="text-overlay contents" href="./컨텐츠 소개 페이지/contents.html">컨텐츠 소개</a>
+        <a class="text-overlay reservation" href="./자공 페이지/index.html">공연 예약하기</a>
+    </div>
+
+</body>
+</html>
+

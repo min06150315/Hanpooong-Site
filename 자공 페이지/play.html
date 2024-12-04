@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공연</title> 
+    <link rel="stylesheet" href="./css/play.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    <div id="main"> <!-- 페이지 전체를 감싸는 메인 컨테이너 -->
+        <div id="main-title"> <!-- 페이지 상단의 제목 섹션 -->
+            <p>2024 한풍 정기공연</p>
+            <p class="title">화양연화</p> 
+        </div>
+        <div id="menu-bar"> <!-- 메뉴바 섹션 -->
+            <a href="./menu/info.html">공연정보</a> <!-- 공연 정보 페이지로 이동 -->
+            <a href="./menu/member.html">출연인원</a> <!-- 출연 인원 소개 페이지로 이동 -->
+            <a href="./menu/go_rv.html">예매하러가기</a> <!-- 예매 페이지로 이동 -->
+            <a href="./menu/question.html">문의</a> <!-- 문의 페이지로 이동 -->
+            <a href="https://www.instagram.com/hanpoong.official/" target="_blank">인스타</a> <!-- 인스타그램 링크 (새 탭에서 열림) -->
+        </div>
+        <div id="content"> <!-- 본문 컨텐츠 영역 -->
+            <div id="video"> <!-- 동영상 삽입 섹션 -->
+                <iframe src="https://drive.google.com/file/d/1m0BYTIwbZMqTS-YwPIMpv-l34G36fyxm/preview" 
+                        width="640" height="360" frameborder="0" 
+                        allow="autoplay; fullscreen" allowfullscreen>
+                </iframe> <!-- Google Drive에서 제공하는 동영상 프리뷰 -->
+            </div>
+            <div id="intro"> <!-- 공연 소개 및 메시지 섹션 -->
+                <p>
+                    화양연화란 ‘꽃 화, 모양 양, 해년(연), 빛날 화’의 한자로 즉, 인생에서 가장 아름답고 행복한 시절을 뜻합니다.<br><br>
+                    한풍이 화양연화라는 이름으로 자체공연 이름을 짓게 된 이유는 갓 20살이 되고 20대 초반에 있는 다양한 친구들이 한풍이라는 아름다운 공동체에 모여 같이 기쁨과 슬픔을 나누며 인생의 아름다운 시기를 보내고 있다고 생각하여 화양연화라는 주제를 24년도 자체공연의 이름으로 짓게 되었습니다.<br><br>
+                
+                    여러분들의 화양연화는 언제이셨나요..? 혹시 지금 인생의 화양연화를 보내고 계신가요?<br><br>
+                    
+                    오늘 한풍의 공연이 여러분들의 화양연화를 회상할 수 있는 계기가 되었으면 좋겠습니다 :)<br>
+                </p> 
+                <button id="navigate-button" onclick="navigateToFile()">메인 페이지로 이동</button> <!-- 메인 페이지로 이동 버튼 -->
+                
+                <script>
+                    function navigateToFile() {
+                      // 메인 페이지 파일 경로로 이동
+                      window.location.href = './index.html'; 
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

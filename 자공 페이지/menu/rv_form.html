@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예매 Form</title>
+    <link rel="stylesheet" href="../css/rv_form.css">
+    <script>
+        // 폼 제출 시 실행될 함수
+        function handleSubmit(event) {
+            event.preventDefault();  // 폼의 기본 제출 동작을 막음
+
+            // 입력된 값을 가져오기
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var no = document.getElementById('no').value;
+            var seat = document.getElementById('seat').value;
+            var seatNum = document.getElementById('seat_num').value;
+
+            // 알림 창을 띄우기
+            alert("제출이 완료되었습니다!\n\n" + 
+                  "이름: " + name + "\n" +
+                  "전화 번호: " + phone + "\n" +
+                  "공연 회차: " + no + "\n" +
+                  "좌석 번호: " + seat + "\n" +
+                  "총 좌석 수: " + seatNum);
+
+            history.back();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="img">
+            <img src="../img/seat.png" width="100%">
+        </div>
+        <div id="form">
+            <form onsubmit="handleSubmit(event)">
+                <label for="name">이름: </label> 
+                <input type="text" name="name" id="name" placeholder="ex) 김동민" required>
+                <br>
+
+                <label for="phone">전화 번호:</label>
+                <input type="text" name="phone" id="phone" placeholder="ex) 010-1234-5678" required>
+                <br>
+
+                <label for="no">공연 회차:</label>
+                <select id="no" name="no" required>
+                    <option value="info" disabled selected>공연을 선택하세요</option>
+                    <option value="1">1공</option>
+                    <option value="2">2공</option>
+                    <option value="3">3공</option>
+                </select>
+                <br>
+                
+                <label for="seat">좌석 번호:</label>
+                <input type="text" name="seat" id="seat" placeholder="ex) C-12, C-13" required>
+                <br>
+                
+                <label for="seat_num">총 좌석 수:</label>
+                <input type="number" name="seat_num" id="seat_num" placeholder="ex) 2" required>
+                <br>
+                <input type="submit" value="제출하기">
+            </form> 
+        </div>
+
+        <div id="info">
+            <b>
+                선택하신 좌석이 빈자리가 맞는지 좌석시트 조회 후 예매 해주세요!<br>
+                선택하신 좌석 수 만큼 신한 110534814482(김동민)으로 임금 부탁드립니다!<br>
+                감사합니다 :)<br>
+            </b>
+        </div>
+    </div>
+</body>
+</html>

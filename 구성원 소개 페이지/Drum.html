@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>북치배 소개</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans KR", "sans-serif";
+        text-align: center;
+        background-image: url(./img/bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .main-image {
+        width: 200px; /* 첫 번째 사진 크기 */
+        height: auto;
+        margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+        display: block;
+        cursor: pointer; /* 클릭할 수 있다는 것을 표시하는 커서 */
+      }
+      .container {
+        display: grid;
+        grid-gap: 20px; /* 사진 간의 간격 */
+        justify-items: center; /* 사진 중앙 정렬 */
+        padding: 20px;
+      }
+      .container.first-row {
+        grid-template-columns: repeat(3, 1fr); /* 첫 번째 줄에 3개 */
+      }
+      .container.second-row {
+        grid-template-columns: repeat(4, 1fr); /* 두 번째 줄에 4개 */
+      }
+      .card {
+        width: 250px; /* 사람 사진 크기 확대 */
+        text-align: center; /* 설명 중앙 정렬 */
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f9f9f9;
+      }
+      .card img {
+        width: 100%; /* 카드 너비에 맞게 조정 */
+        height: 250px; /* 사람 사진 높이 고정, 크기 키움 */
+        object-fit: cover; /* 비율 유지 */
+        border-radius: 8px;
+      }
+      .card p {
+        font-size: 14px; /* 텍스트 크기 */
+        margin: 5px 0; /* 텍스트와 사진 간 여백 */
+        color: #333; /* 설명 텍스트 색상 */
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <h1 style="color: white">북치배 소개</h1>
+
+    <!-- 첫 번째 이미지 (북 사진) -->
+    <img
+      src="./img/instrument/북.jpeg"
+      alt="북 사진"
+      class="main-image"
+      id="북소리"
+    /><br />
+
+    <!-- 첫 번째 줄: 3개 -->
+    <div class="container first-row">
+      <div class="card">
+        <img src="./img/member/drum/손희준.jpeg" alt="손희준" />
+        <p>27기 수북 손희준</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/drum/김동민.jpeg" alt="김동민" />
+        <p>27기 북치배 김동민</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/drum/이은.jpeg" alt="이은" />
+        <p>27기 북치배 이은</p>
+      </div>
+    </div>
+
+    <!-- 두 번째 줄: 4개 -->
+    <div class="container second-row">
+      <div class="card">
+        <img src="./img/member/drum/변주하.jpeg" alt="변주하" />
+        <p>28기 북치배 변주하</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/drum/문예은.jpeg" alt="문예은" />
+        <p>28기 북치배 문예은</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/drum/나희주.jpeg" alt="나희주" />
+        <p>28기 북치배 나희주</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/drum/주한결.jpeg" alt="주한결" />
+        <p>28기 북치배 주한결</p>
+      </div>
+    </div>
+
+    <!-- 소리 파일 추가 -->
+    <audio id="북소리-소리" src="./music/북소리.mp3" preload="auto"></audio>
+
+    <script>
+      // 이미지를 클릭했을 때 소리 재생
+      document.getElementById("북소리").addEventListener("click", function () {
+        var sound = document.getElementById("북소리-소리");
+        sound.play(); // 소리 재생
+      });
+    </script>
+  </body>
+</html>

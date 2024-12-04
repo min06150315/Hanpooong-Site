@@ -1,0 +1,102 @@
+/* 메인 영역 스타일 */
+body {
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #d4d9da;
+    font-family: 'Noto Sans KR', sans-serif; /* 폰트 적용 */
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+    margin-bottom: 50px;
+}
+
+/* 타이틀 영역 */
+#main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700; /* 굵게 */
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 130%;
+}
+
+/* 콘텐츠 컨테이너 */
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* 반응형: 화면 크기에 따라 행으로 넘어감 */
+    justify-content: space-around; /* 항목을 균등 배치 */
+    gap: 20px; /* 항목 간 간격 */
+}
+
+/* 각 콘텐츠 박스 */
+#content > div {
+    flex: 1 1 300px; /* 최소 크기 300px, 나머지 비율 조정 */
+    max-width: 350px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+    display: flex; /* 플렉스 컨테이너 설정 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 */
+}
+
+#content > div:hover {
+    transform: scale(1.05); /* 마우스 오버 시 확대 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* 그림자 강조 */
+}
+
+/* 이미지 스타일 */
+#content img {
+    width: 100%; /* 이미지 크기를 박스에 맞춤 */
+    max-width: 250px; /* 최대 크기 제한 */
+    height: auto; /* 비율 유지 */
+    border-radius: 5px; /* 둥근 모서리 */
+    margin-bottom: 10px;
+}
+
+/* 텍스트 스타일 */
+#content p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 상태 텍스트 스타일 */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* 하이퍼링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    #content {
+        flex-direction: column; /* 세로 배치 */
+        align-items: center;
+    }
+
+    #content > div {
+        margin-bottom: 20px; /* 하단 간격 추가 */
+    }
+}

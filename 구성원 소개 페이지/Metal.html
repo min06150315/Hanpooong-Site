@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쇠치배 소개</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans KR", "sans-serif";
+        text-align: center;
+        background-image: url(./img/bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .main-image {
+        width: 200px; /* 첫 번째 사진 크기 */
+        height: auto;
+        margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+        display: block;
+        cursor: pointer; /* 클릭할 수 있다는 것을 표시하는 커서 */
+      }
+      .container {
+        display: flex;
+        justify-content: center; /* 중앙 정렬 */
+        gap: 30px; /* 카드 간의 간격 */
+      }
+      .card {
+        width: calc(45% - 30px); /* 한 줄에 두 개씩 더 큰 배치 */
+        max-width: 300px; /* 카드 최대 크기 */
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f9f9f9;
+      }
+      .card img {
+        width: 100%; /* 카드 너비에 맞게 조정 */
+        max-height: 250px; /* 이미지 최대 높이 확장 */
+        object-fit: cover; /* 이미지 비율 유지 및 잘림 방지 */
+        display: block;
+      }
+      .card p {
+        text-align: center;
+        font-size: 14px; /* 텍스트 크기 조정 */
+        margin: 8px 0; /* 텍스트와 이미지 간 간격 추가 */
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <h1 style="color: white">쇠치배 소개</h1>
+
+    <!-- 첫 번째 이미지 (꽹가리 사진) -->
+    <img
+      src="./img/instrument/쇠.jpg"
+      alt="쇠 사진"
+      class="main-image"
+      id="쇠소리"
+    /><br />
+
+    <!-- 추가된 4개의 이미지 -->
+    <div class="container">
+      <div class="card">
+        <img src="./img/member/metal/이지원.jpeg" alt="이지원" />
+        <p>27기 마당장 이지원</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/metal/이승규.jpeg" alt="이승규" />
+        <p>27기 부쇠 이승규</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/metal/윤한나.jpeg" alt="윤한나" />
+        <p>28기 쇠치배 윤한나</p>
+      </div>
+      <div class="card">
+        <img src="./img/member/metal/박민수.jpeg" alt="박민수" />
+        <p>28기 쇠치배 박민수</p>
+      </div>
+    </div>
+
+    <!-- 소리 파일 추가 -->
+    <audio id="쇠소리-소리" src="./music/쇠소리.mp3" preload="auto"></audio>
+
+    <script>
+      // 이미지를 클릭했을 때 소리 재생
+      document.getElementById("쇠소리").addEventListener("click", function () {
+        var sound = document.getElementById("쇠소리-소리");
+        sound.play(); // 소리 재생
+      });
+    </script>
+  </body>
+</html>
